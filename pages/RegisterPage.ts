@@ -33,14 +33,10 @@ export class RegisterPage{
         this.accountPageDescription = this.page.getByText("We sent a verification link to mona@gmail.com. Click it to activate your account — the link expires in 24 hours.");
     }
 
-    // async clickLoginSignup(){
-    //     await this.loginSignup.click();
-    // }
-
     async clickLoginSignup(){
-    await this.loginSignup.scrollIntoViewIfNeeded();
-    await this.loginSignup.click();
-}
+        await this.loginSignup.click();
+    }
+
 
     async clickSignup(){
         await this.signupButton.click();
