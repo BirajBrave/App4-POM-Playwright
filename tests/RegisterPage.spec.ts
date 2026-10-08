@@ -6,6 +6,7 @@ test("User Register Sucessifully", async({page})=>{
     const registerPage = new RegisterPage(page);
 
     await page.goto("https://qaplayground.com/");
+    await page.waitForLoadState("networkidle");
 
     await registerPage.clickLoginSignup();
     await expect(page).toHaveURL("https://qaplayground.com/auth/sign-in");
